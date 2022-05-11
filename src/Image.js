@@ -1,13 +1,28 @@
 import React from 'react';
-import beast1 from './beast1.png'
+import HornedBeast from './HornedBeast';
+
 
 class Image extends React.Component{
   render() {
     return (
-      <div className="beast">
-       <img src={beast1} alt="beast1"/>
-       </div>
-    );
+      <>
+      <HornedBeast
+      title='Beast1'
+      description = {'this is a beast'}
+      url = {
+        'https://img.etimg.com/thumb/msid-91314399,width-650,imgsize-64026,,resizemode-4,quality-100/beast-poster.jpg'
+      }
+      />
+
+      <HornedBeast
+      title='Beast1'
+      description = {'this is a beast'}
+      url = {
+        'https://en.wikipedia.org/wiki/Beast_(character)#/media/File:Beast_(Hank_McCoy_-_circa_2019).png'
+      }
+      />
+      </>
+    )
   }
 }
  
