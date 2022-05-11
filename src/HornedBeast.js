@@ -4,10 +4,12 @@ import Image from './Image.js';
 class HornedBeast extends React.Component {
   render() {
     return (
-      <article>
-        <h2> Title </h2>
-       <Image />
-      </article>
+      <>
+        <h2> {this.props.title} </h2>
+       <img src={this.props.url} alt={this.props.title} title={this.props.title}
+       />
+       <p>{this.props.description}</p>
+      </>
     );
   
   }
