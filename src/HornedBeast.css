@@ -1,0 +1,63 @@
+main  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+.card{
+  display: flex;
+  align-items: center;
+  /* height: fit-content; */
+  padding: 1vw;
+  margin: 0.5vw 0.5vw 0.5vw 0.5vw;
+  filter: drop-shadow(0 0 0.75rem black);
+
+ 
+}
+.card-text {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5vw;
+ 
+}
+.card-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2vw;
+}
+div.card-body { text-align: center;
+
+}
+
+main img {
+  border-style: solid;
+
+}
+
+div .div-button{
+  padding: 1rem 2rem;
+  background: #0093E9;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  font-family: 'Pacifico', cursive;
+
+
+}
+
+div .div-button:active .front {
+  transform: translateY(-2px);
+}
+
+
+.front {
+  display: block;
+  padding: 12px 42px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  background: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%, #ffffff 100%);;
+  color: white;
+  transform: translateY(-6px);
+}
+
