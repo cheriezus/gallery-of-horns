@@ -1,14 +1,49 @@
 import React from 'react';
-import Image from './Image.js';
+import './HornedBeast.css'
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 
 class HornedBeast extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state ={
+    likes: 0,
+
+    }
+  }
+
+  likeBeast = () => {
+this.setState({
+  likes: this.state.likes + 1
+});
+ };
+
+
+
+
+
   render() {
     return (
       <>
-        <h2> {this.props.title} </h2>
-       <img src={this.props.url} alt={this.props.title} title={this.props.title}
-       />
-       <p>{this.props.description}</p>
+       
+
+        <Card style={{ width: '18rem' }}>
+  <Card.Img variant="top" src={this.props.image_url} alt={this.props.name} />
+  <Card.Body>
+    <Card.Title>{this.props.name}</Card.Title>
+    <p>
+        💙 {this.state.likes}
+        <p> Likes!</p>
+        </p>
+        
+    <Card.Text>
+    {this.props.description}
+    </Card.Text>
+    <Button className= 'div-button' onClick={this.likeBeast}> <span class="front">
+    Like
+  </span> </Button>
+  </Card.Body>
+</Card>
       </>
     );
   
