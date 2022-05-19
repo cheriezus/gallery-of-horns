@@ -13,7 +13,7 @@ class HornedBeast extends React.Component {
   }
 
   likeBeast = () => {
-this.setState({
+color-adjusttate({
   likes: this.state.likes + 1
 });
  };
