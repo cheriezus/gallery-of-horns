@@ -19,7 +19,9 @@ this.setState({
  };
 
 
-
+ handleBeastClick = () => {
+  this.props.displayModalImg(this.props.image_url)
+ }
 
 
   render() {
@@ -28,7 +30,7 @@ this.setState({
        
 
         <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.image_url} alt={this.props.name} />
+  <Card.Img variant="top" src={this.props.image_url} alt={this.props.name} onClick={this.handleBeastClick}/>
   <Card.Body>
     <Card.Title>{this.props.name}</Card.Title>
     <p>

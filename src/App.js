@@ -5,16 +5,35 @@ import Main from './Main.js'
 import Footer from './Footer.js'
 import './Main';
 
+import data from './data.json';
+import SelectedBeast from './SelectedBeast';
 
 class App extends React.Component {
+  
+
+
+  
 
   render() {
     return (
       <>
         <Header />
-        <Main />
-     
-      <Footer />
+        
+    
+        
+        <Main
+          data={data}
+          displayModalImg={this.displayModalImg}
+        />
+
+        <Footer />
+        
+          
+        <SelectedBeast
+       
+      
+        />
+        
       </>
     );
   }
