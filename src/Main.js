@@ -12,7 +12,7 @@ class Main extends React.Component{
          key={beastsData._id} 
          description={beastsData.description}
           alt={beastsData.alt}
-          displayModalImg={this.props.displayModalImg}
+          openModalControl={this.props.openModalControl}
            />)
       });
 

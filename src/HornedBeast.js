@@ -13,16 +13,18 @@ class HornedBeast extends React.Component {
   }
 
   likeBeast = () => {
-color-adjusttate({
+this.setState({
   likes: this.state.likes + 1
 });
  };
 
 
- handleBeastClick = () => {
-  this.props.displayModalImg(this.props.image_url)
- }
+ controlBeastClick = () => {
+  this.props.openModalControl(this.props.image_url, this.props.description, this.props.name)
+}
 
+
+ 
 
   render() {
     return (
@@ -30,7 +32,7 @@ color-adjusttate({
        
 
         <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={this.props.image_url} alt={this.props.name} onClick={this.handleBeastClick}/>
+  <Card.Img variant="top" src={this.props.image_url} alt={this.props.name} onClick={this.controlBeastClick}/>
   <Card.Body>
     <Card.Title>{this.props.name}</Card.Title>
     <p>

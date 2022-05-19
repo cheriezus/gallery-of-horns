@@ -1,45 +1,39 @@
 import React from 'react';
+import './SelectedBeast.css'
 import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isImgDisplayed: false,
-      beastImg: ''
-    }
-  }
 
-
-
-  displayModalImg = (img_Url, name) => {
-    this.setState({
-      isImgDisplayed: true,
-      beastImg: img_Url,
-      beastName: name
-    });
-  };
-
-  closeImgModal = () => {
-    this.setState({
-      isImgDisplayed: false
-    });
-  };
 
   render() {
     return (
-      <>
-        <Modal show={this.state.isModalDisplaying} onHide={this.closeModalHandler}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
+   <Modal
+size="md"
+show={this.props.isModalDisplaying}
+onHide={this.props.closeModalControl}>
+<Modal.Header>
+  <Modal.Title>
+    {this.props.modalName}
+  </Modal.Title>
+</Modal.Header>
+<Modal.Body>
+<img
+            src={this.props.modalImg}
+            alt={this.props.modalDesc}
+            title={this.props.modalName}
+          />
+        <Modal.Body>
+    {this.props.modalDesc}
+  </Modal.Body>   
            
-          </Modal.Footer>
-        </Modal>
-      </>
-      
+</Modal.Body>
+<Modal.Footer>
+<Button className= 'div-button' onClick={this.props.closeModalControl}> <span class="front">
+  Close
+  </span> </Button>
+</Modal.Footer>
+</Modal> 
     );
   }
 }
