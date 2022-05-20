@@ -11,18 +11,19 @@ class Main extends React.Component{
          image_url={beastsData.image_url} 
          key={beastsData._id} 
          description={beastsData.description}
+         horns={beastsData.horns}
           alt={beastsData.alt}
           openModalControl={this.props.openModalControl}
            />)
       });
 
+    
 
     
 
     return (
       <main>
       {renderAllHornedBeasts}
-    
       </main>
     );
   }
